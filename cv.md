@@ -15,6 +15,7 @@ My main expectations and goals:
  * Get basic understanding of the best practices of modern applications design;
  * I want to gain teamwork experience with professionals.
 
+***
 
  ## Summary
   I have 5 year experience of working as L2 Support engineer. Technologies I'm working with are SQL, Delphy, 1C, FastReport.
