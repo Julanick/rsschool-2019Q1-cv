@@ -1,0 +1,94 @@
+body {
+  width: 1020px;
+  margin: auto;
+  background-color: ghostwhite;
+  font-size: 1.2em;
+  font-family: Cursive;
+}
+
+body a {
+  text-decoration: none;
+  color: #000080;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  border-top: 1px solid gray;
+  padding: 15px 10px 0px;
+  margin-bottom: 10px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 15px) 150px;
+  grid-template-rows: repeat(3, 30px);
+  align-items: center;
+  justify-items: start;
+  color: #bebebe;
+  font-family: Lato;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 30px;
+}
+
+.contacts-grid img:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.contacts-grid>img {
+  justify-self: center;
+}
+
+.phone-img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.phone-link {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.email-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.email-link {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.skype-img {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.skype-link {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.avatar {
+  vertical-align: middle;
+  border-radius: 20px;
+  width: 40%;
+  display: inline-block;
+  margin: 20px auto;
+  vertical-align: middle;
+}
+
+.about {
+  vertical-align: middle;
+  width: 50%;
+  display: inline-block;
+  margin: 20px auto;
+}
