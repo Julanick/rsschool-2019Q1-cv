@@ -43,6 +43,62 @@
     </ul>
     <p>The main reason I'm on this courses is that a technologies at my current job is outdated. And I wish to develop
       myself as professional to achieve success: career, skills, recognition, financial.</p>
+    <h2>Skills</h2>
+    <table>
+      <tr>
+        <td><strong>Foreign language</strong></td>
+        <td>English (B1), German (basic)</td>
+      </tr>
+      <tr>
+        <td><strong>DB</strong></td>
+        <td>Informix, FoxPro, Cache, MSSQL</td>
+      </tr>
+      <tr>
+        <td><strong>Programming languages</strong></td>
+        <td>Delphi, Pascal, 1C, JavaScript, HTML, CSS, Git Bash</td>
+      </tr>
+    </table>
+    <p>As an example, I can give the text of the stored procedure Update from the Informix database: </p>
+    <p class="code-wrapper">
+      <code>
+          CREATE PROCEDURE "informix".p_upd(vold_list integer, vnew_list integer) <br>
+
+          returning varchar(250);<br>
+          define vorder_id integer;<br>
+          define vsvc_id integer;<br>
+          define vnewsvc_id integer;<br>
+          define vname varchar(250);<br>
+          <br>
+          foreach cur1 for<br>
+          <br>
+            select x.order_id ,y.svc_id, z.name<br>
+            into vorder_id, vsvc_id, vname<br>
+            from (prl_order x <br>
+            join prl_ord_svc y<br>
+            on x.order_id=y.order_id)<br>
+            join prl_svc z<br>
+            on y.svc_id=z.svc_id<br>
+            where x.id_arm=98 and x.order_date >'31.12.2015' and z.pricelist_id=vold_list<br>
+            <br>
+            select svc_id <br>
+            into vnewsvc_id<br>
+            from prl_svc<br>
+            where pricelist_id=vnew_list and name=vname;<br>
+            <br>
+            update prl_ord_mat<br>
+            set svc_id=vnewsvc_id<br>
+            where order_id=vorder_id and svc_id=vsvc_id;<br>
+            <br>
+            update prl_ord_svc<br>
+            set svc_id=vnewsvc_id<br>
+            where order_id=vorder_id and svc_id=vsvc_id;<br>
+            <br>
+          end foreach;<br>
+          return '' with resume;<br>
+          <br>
+          end procedure;<br>
+        </code>
+    </p>
   </main>
   <footer></footer>
 </body>

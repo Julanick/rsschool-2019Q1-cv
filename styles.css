@@ -24,6 +24,22 @@ h2 {
   margin-bottom: 10px;
 }
 
+table {
+  font-family: "Lucida Sans Unicode";
+  font-size: 14px;
+  border-radius: 20px;
+  border-spacing: 0;
+  text-align: justify;
+}
+
+td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  padding: 10px 20px;
+  background: #F8E391;
+}
+
 .contacts-grid {
   display: grid;
   grid-template-columns: repeat(2, 15px) 150px;
@@ -75,6 +91,14 @@ h2 {
 .skype-link {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
+}
+
+.code-wrapper {
+  overflow: auto;
+  height: 400px;
+  padding: 5px;
+  border: solid 1px rgb(176, 183, 189);
+  background-color: rgb(228, 228, 224);
 }
 
 .avatar {
