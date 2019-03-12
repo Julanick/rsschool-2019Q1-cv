@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>My profile</title>
+</head>
+<body>
+  <header>
+    <div class="about">
+      <h1>Yuliya Pakidzka</h1>
+      <div class="contacts-grid">
+        <img class="phone-img" src="assets/phone.png" alt="imagePhone">
+        <a class="phone-link" href="tel:+375292311231"> <em>+375292311231</em></a>
+        <br>
+        <img class="email-img" src="assets/email.png" alt="imageEmail">
+        <a class="email-link" href="mailto:julanick@gmail.com"><em>julanick@gmail.com</em></a>
+        <br>
+        <img class="skype-img" src="assets/skype.png" alt="imageSkype">
+        <a class="skype-link" href="skype:Julanick?chat"><em>Julanick</em></a>
+      </div>
+    </div>
+    <img class="avatar" src="assets/girl.jpg" alt="imageAvatar">
+  </header>
+  <main>
+    <h2>Objective</h2>
+    <p>My main expectations and goals:</p>
+    <ul>
+      <li>Improving of knowledge and get new skills of using development tools;</li>
+      <li>Get basic understanding of the best practices of modern applications design;</li>
+      <li>I want to gain teamwork experience with professionals.</li>
+    </ul>
+    <h2>Summary</h2>
+    <p>I have 5 year experience of working as L2 Support engineer. Technologies I'm working with are SQL, Delphy, 1C,
+      FastReport.</p>
+    <p> My main responsibilities :</p>
+    <ul>
+      <li>Supporting of different system;</li>
+      <li>Making of small changes and sometimes bug fixing in programs;</li>
+      <li>Implementation of new features in legacy enterprise applications.</li>
+    </ul>
+    <p>The main reason I'm on this courses is that a technologies at my current job is outdated. And I wish to develop
+      myself as professional to achieve success: career, skills, recognition, financial.</p>
+    <h2>Skills</h2>
+    <table>
+      <tr>
+        <td><strong>Foreign language</strong></td>
+        <td>English (B1), German (basic)</td>
+      </tr>
+      <tr>
+        <td><strong>DB</strong></td>
+        <td>Informix, FoxPro, Cache, MSSQL</td>
+      </tr>
+      <tr>
+        <td><strong>Programming languages</strong></td>
+        <td>Delphi, Pascal, 1C, JavaScript, HTML, CSS, Git Bash</td>
+      </tr>
+    </table>
+    <p>As an example, I can give the text of the stored procedure Update from the Informix database: </p>
+    <p class="code-wrapper">
+      <code>
+          CREATE PROCEDURE "informix".p_upd(vold_list integer, vnew_list integer) <br>
+          <br>
+          returning varchar(250);<br>
+          define vorder_id integer;<br>
+          define vsvc_id integer;<br>
+          define vnewsvc_id integer;<br>
+          define vname varchar(250);<br>
+          <br>
+          foreach cur1 for<br>
+          <br>
+            select x.order_id ,y.svc_id, z.name<br>
+            into vorder_id, vsvc_id, vname<br>
+            from (prl_order x <br>
+            join prl_ord_svc y<br>
+            on x.order_id=y.order_id)<br>
+            join prl_svc z<br>
+            on y.svc_id=z.svc_id<br>
+            where x.id_arm=98 and x.order_date = '31.12.2015' and z.pricelist_id=vold_list<br>
+            <br>
+            select svc_id <br>
+            into vnewsvc_id<br>
+            from prl_svc<br>
+            where pricelist_id=vnew_list and name=vname;<br>
+            <br>
+            update prl_ord_mat<br>
+            set svc_id=vnewsvc_id<br>
+            where order_id=vorder_id and svc_id=vsvc_id;<br>
+            <br>
+            update prl_ord_svc<br>
+            set svc_id=vnewsvc_id<br>
+            where order_id=vorder_id and svc_id=vsvc_id;<br>
+            <br>
+          end foreach;<br>
+          return '' with resume;<br>
+          <br>
+          end procedure;<br>
+        </code>
+    </p>
+    <p>My tests tasks: </p>
+    <ul>
+      <li>
+        <a href="https://www.codecademy.com/users/juliyaPakidzka4293641960/achievements" target="_blank">HTML and CSS
+          Basics</a>
+      </li>
+      <li>
+        <a href="https://htmlacademy.ru/profile/id956891/achievements" target="_blank">HTML Academy</a>
+      </li>
+    </ul>
+    <h2>Education</h2>
+    <p><strong>Higher education</strong></p>
+    <p> <strong>2016 - till now</strong> </p>
+    <p>International School of English "IH"</p>
+    <p><strong> 2009 - 2014</strong></p>
+    <p><strong> Belarussian National Technical University</strong></p>
+    <p>Faculty : Information Technologies and Robotics</p>
+  </main>
+  <footer></footer>
+</body>
+</html>
