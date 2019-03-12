@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
   <title>My profile</title>
 </head>
-
 <body>
   <header>
     <div class="about">
       <h1>Yuliya Pakidzka</h1>
       <div class="contacts-grid">
-        <img class="phone-img" src="img/phone.png">
+        <img class="phone-img" src="assets/phone.png" alt="imagePhone">
         <a class="phone-link" href="tel:+375292311231"> <em>+375292311231</em></a>
         <br>
-        <img class="email-img" src="img/email.png">
+        <img class="email-img" src="assets/email.png" alt="imageEmail">
         <a class="email-link" href="mailto:julanick@gmail.com"><em>julanick@gmail.com</em></a>
         <br>
-        <img class="skype-img" src="img/skype.png">
+        <img class="skype-img" src="assets/skype.png" alt="imageSkype">
         <a class="skype-link" href="skype:Julanick?chat"><em>Julanick</em></a>
       </div>
     </div>
-    <img class="avatar" src="img/girl.jpg">
+    <img class="avatar" src="assets/girl.jpg" alt="imageAvatar">
   </header>
   <main>
     <h2>Objective</h2>
@@ -78,7 +76,7 @@
             on x.order_id=y.order_id)<br>
             join prl_svc z<br>
             on y.svc_id=z.svc_id<br>
-            where x.id_arm=98 and x.order_date >'31.12.2015' and z.pricelist_id=vold_list<br>
+            where x.id_arm=98 and x.order_date = '31.12.2015' and z.pricelist_id=vold_list<br>
             <br>
             select svc_id <br>
             into vnewsvc_id<br>
@@ -119,5 +117,4 @@
   </main>
   <footer></footer>
 </body>
-
 </html>

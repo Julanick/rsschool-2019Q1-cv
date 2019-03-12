@@ -1,9 +1,9 @@
 body {
   width: 1020px;
-  margin: auto;
-  background-color: ghostwhite;
+  margin: 0 auto;
   font-size: 1.2em;
   font-family: Cursive;
+  background-color: ghostwhite;
 }
 
 body a {
@@ -17,40 +17,39 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 10px;
+  padding: 15px 10px 0px;
   font-size: 2em;
   font-weight: bold;
   border-top: 1px solid gray;
-  padding: 15px 10px 0px;
-  margin-bottom: 10px;
 }
 
 table {
-  font-family: "Lucida Sans Unicode";
   font-size: 14px;
-  border-radius: 20px;
-  border-spacing: 0;
+  font-family: "Lucida Sans Unicode";
   text-align: justify;
+  border-spacing: 0;
 }
 
 td {
-  border-style: solid;
-  border-width: 0 1px 1px 0;
-  border-color: white;
   padding: 10px 20px;
   background: #F8E391;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .contacts-grid {
   display: grid;
+  margin: 30px;
   grid-template-columns: repeat(2, 15px) 150px;
   grid-template-rows: repeat(3, 30px);
   align-items: center;
   justify-items: start;
-  color: #bebebe;
-  font-family: Lato;
   font-size: 1.2em;
+  font-family: Lato;
   font-weight: 700;
-  margin: 30px;
+  color: #bebebe;
 }
 
 .contacts-grid img:hover {
@@ -94,25 +93,24 @@ td {
 }
 
 .code-wrapper {
-  overflow: auto;
   height: 400px;
   padding: 5px;
+  overflow: auto;
   border: solid 1px rgb(176, 183, 189);
   background-color: rgb(228, 228, 224);
 }
 
 .avatar {
-  vertical-align: middle;
-  border-radius: 20px;
-  width: 40%;
   display: inline-block;
+  width: 40%;
   margin: 20px auto;
   vertical-align: middle;
+  border-radius: 20px;
 }
 
 .about {
-  vertical-align: middle;
-  width: 50%;
   display: inline-block;
+  width: 50%;
   margin: 20px auto;
+  vertical-align: middle;
 }
