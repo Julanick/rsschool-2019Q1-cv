@@ -1,0 +1,116 @@
+body {
+  width: 1020px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: Cursive;
+  background-color: ghostwhite;
+}
+
+body a {
+  text-decoration: none;
+  color: #000080;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  margin-bottom: 10px;
+  padding: 15px 10px 0px;
+  font-size: 2em;
+  font-weight: bold;
+  border-top: 1px solid gray;
+}
+
+table {
+  font-size: 14px;
+  font-family: "Lucida Sans Unicode";
+  text-align: justify;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px 20px;
+  background: #F8E391;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.contacts-grid {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: repeat(2, 15px) 150px;
+  grid-template-rows: repeat(3, 30px);
+  align-items: center;
+  justify-items: start;
+  font-size: 1.2em;
+  font-family: Lato;
+  font-weight: 700;
+  color: #bebebe;
+}
+
+.contacts-grid img:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.contacts-grid>img {
+  justify-self: center;
+}
+
+.phone-img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.phone-link {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.email-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.email-link {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.skype-img {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.skype-link {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.code-wrapper {
+  height: 400px;
+  padding: 5px;
+  overflow: auto;
+  border: solid 1px rgb(176, 183, 189);
+  background-color: rgb(228, 228, 224);
+}
+
+.avatar {
+  display: inline-block;
+  width: 40%;
+  margin: 20px auto;
+  vertical-align: middle;
+  border-radius: 20px;
+}
+
+.about {
+  display: inline-block;
+  width: 50%;
+  margin: 20px auto;
+  vertical-align: middle;
+}
